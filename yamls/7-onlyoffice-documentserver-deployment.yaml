@@ -32,7 +32,7 @@ spec:
         - name: DB_USER
           value: onlyoffice
         image: docker.io/onlyoffice/documentserver
-        imagePullPolicy: ""
+        imagePullPolicy: "IfNotPresent"
         name: onlyoffice-documentserver
         ports:
         - containerPort: 80
@@ -61,6 +61,6 @@ spec:
           claimName: onlyoffice-documentserver-claim
       - name: onlyoffice-ssl
         secret:
-          secretName: onlyoffice-ssl      
+          secretName: wildcard-cert      
           defaultMode: 0666  
 status: {}

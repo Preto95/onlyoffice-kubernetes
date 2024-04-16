@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - image: rabbitmq
-        imagePullPolicy: ""
+        imagePullPolicy: "IfNotPresent"
         name: onlyoffice-rabbitmq
         ports:
         - containerPort: 5672
